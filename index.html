@@ -1,0 +1,4979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>KisanDirect | AI-Powered Farm Marketplace</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar" id="publicNavbar">
+
+        <div class="logo">
+            🌾
+            <span>KisanDirect</span>
+        </div>
+
+        <nav>
+            <a href="#home" data-i18n="home">Home</a>
+
+<a href="#marketplace" data-i18n="marketplace">Marketplace</a>
+
+<a href="#how-it-works" data-i18n="howItWorks">How It Works</a>
+
+<a href="#ai" data-i18n="aiSolutions">AI Solutions</a>
+        </nav>
+
+        <div class="nav-buttons">
+        
+        <select id="languageSelector" class="language-selector"
+        onchange="changeLanguage(this.value)">
+    
+    <option value="en">🌐 English</option>
+    <option value="hi">🇮🇳 हिंदी</option>
+    <option value="bn">🇮🇳 বাংলা</option>
+    <option value="mr">🇮🇳 मराठी</option>
+    <option value="te">🇮🇳 తెలుగు</option>
+    <option value="ta">🇮🇳 தமிழ்</option>
+    <option value="gu">🇮🇳 ગુજરાતી</option>
+    <option value="kn">🇮🇳 ಕನ್ನಡ</option>
+    <option value="ml">🇮🇳 മലയാളം</option>
+    <option value="pa">🇮🇳 ਪੰਜਾਬੀ</option>
+    <option value="or">🇮🇳 ଓଡ଼ିଆ</option>
+    <option value="as">🇮🇳 অসমীয়া</option>
+    <option value="ur">🇮🇳 اردو</option>
+
+</select>
+
+
+    <button data-i18n="login"
+    class="btn login-btn"
+    onclick="openLogin()">
+
+    Login
+
+</button>
+
+
+<button data-i18n="joinNow"
+    class="btn primary-btn"
+    onclick="openRegister()">
+
+    Join Now
+
+</button>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge" data-i18n="badge">
+                    🌱 AI-Powered Agricultural Marketplace
+                </div>
+
+                <h1>
+                    <span data-i18n="heroTitle1">From Farm</span>
+                    <span data-i18n="heroTitle2">Directly to</span>
+                    <span data-i18n="heroTitle3">Market.</span>
+                </h1>
+                    
+                <p data-i18n="heroText">
+                    KisanDirect connects farmers and FPOs
+                    directly with consumers and bulk buyers,
+                    helping farmers earn better prices while
+                    reducing supply-chain inefficiencies.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="btn primary-btn"
+                        onclick="openMarketplace()">
+
+                        🛒 <span data-i18n="explore">Explore Marketplace</span>
+
+                    </button>
+
+                    <button
+                        class="btn outline-btn"
+                        onclick="showFarmerRegistration()">
+
+                        👨‍🌾 <span data-i18n="joinFarmer">Join as Farmer</span>
+                    </button>
+
+                </div>
+
+                <!-- STATS -->
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <strong>10K+</strong>
+                        <span data-i18n="farmers">Farmers</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>2.5K+</strong>
+                        <span data-i18n="buyers">Buyers</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>18+</strong>
+                        <span data-i18n="states">States</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>₹4.2Cr+</strong>
+                        <span data-i18n="farmerSales">Farmer Sales</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= HERO CARD ================= -->
+
+            <div class="hero-visual">
+
+                <div class="farm-card">
+
+                    <div class="farm-icon">
+                        🌾
+                    </div>
+
+                    <h2 data-i18n="smartAgriculture">
+                        Smart Agriculture
+                    </h2>
+
+                    <p data-i18n="smartText">
+                        Connecting farmers,
+                        buyers and logistics
+                        through one platform.
+                    </p>
+
+                    <div class="farm-flow">
+
+                        <div>
+                            👨‍🌾
+                            <span data-i18n="farmer">Farmer</span>
+                        </div>
+
+                        <b>→</b>
+
+                        <div>
+                            🌾
+                            <span>KisanDirect</span>
+                        </div>
+
+                        <b>→</b>
+
+                        <div>
+                            🛒
+                            <span data-i18n="buyer">Buyer</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI CARD -->
+
+                <div class="ai-card">
+
+                    <div class="ai-heading" data-i18n="aiMarketIntelligence">
+                        🤖 AI Market Intelligence
+                    </div>
+
+                    <strong>
+                        +18.4%
+                    </strong>
+
+                    <p data-i18n="expectedDemand">
+                        Expected demand growth
+                        over the next 14 days.
+                    </p>
+
+                    <div class="ai-status" data-i18n="aiRecommendation">
+                        ✓ AI Recommendation
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= MARKETPLACE ================= -->
+
+<section id="marketplace" class="marketplace-section dashboard-subpage">
+
+    <div class="marketplace-header">
+        <div>
+            <span class="section-label" data-i18n="freshFromFarm">FRESH FROM FARM</span>
+            <h2 data-i18n="farmerMarketplace">🌾 Farmer Marketplace</h2>
+            <p data-i18n="marketText">
+                Buy fresh produce directly from farmers
+                at transparent prices.
+            </p>
+        </div>
+    </div>
+
+    <div id="marketplaceList" class="marketplace-grid">
+        <!-- Products will appear here -->
+    </div>
+
+</section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section id="how-it-works" class="features">
+
+            <div class="section-heading">
+
+                <span data-i18n="whyKisanDirect">
+                    WHY KISANDIRECT
+                </span>
+
+                <h2 data-i18n="smarterSupplyChain">
+                    A smarter agricultural
+                    supply chain.
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🤝
+                    </div>
+
+                    <h3 data-i18n="directMarketplace">
+                        Direct Marketplace
+                    </h3>
+
+                    <p data-i18n="directMarketplaceText">
+                        Connect farmers directly
+                        with consumers and bulk buyers.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🤖
+                    </div>
+
+                    <h3 data-i18n="aiDemandForecasting">
+                        AI Demand Forecasting
+                    </h3>
+
+                    <p data-i18n="aiDemandForecastingText">
+                        Predict upcoming demand and
+                        help farmers make smarter
+                        selling decisions.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🚚
+                    </div>
+
+                    <h3 data-i18n="smartLogistics">
+                        Smart Logistics
+                    </h3>
+
+                    <p data-i18n="smartLogisticsText">
+                        Optimize routes and reduce
+                        transportation costs.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        💰
+                    </div>
+
+                    <h3 data-i18n="betterPrices">
+                        Better Prices
+                    </h3>
+
+                    <p data-i18n="betterPricesText">
+                        Reduce unnecessary intermediaries
+                        and improve farmer earnings.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AI SECTION ================= -->
+
+        <section id="ai" class="ai-section">
+
+            <div>
+                <span class="section-label" data-i18n="artificialIntelligence">
+                    ARTIFICIAL INTELLIGENCE
+                </span>
+
+                <h2 data-i18n="predictOptimize">
+                    Predict demand.
+                    <br>
+                    Optimize supply.
+                </h2>
+
+                <p data-i18n="aiEngineText">
+                    Our AI engine analyzes market trends,
+                    historical demand and buyer activity
+                    to help farmers decide what to sell,
+                    when to sell and where to send it.
+                </p>
+
+                <button
+                    class="btn primary-btn"
+                    onclick="showAIMessage()"
+                    data-i18n="exploreAIInsights">
+
+                    Explore AI Insights →
+
+                </button>
+
+            </div>
+
+
+            <div class="forecast-card">
+
+                <div class="forecast-header">
+                    <span data-i18n="demandForecast">🤖 Demand Forecast</span>
+                    <span class="live">● LIVE DEMO</span>
+                </div>
+
+                <div class="forecast-number">
+                    +18.4%
+                </div>
+
+                <p data-i18n="expectedDemandGrowth">
+                    Expected demand growth
+                </p>
+
+                <div class="chart">
+
+                    <div style="height:35%"></div>
+                    <div style="height:48%"></div>
+                    <div style="height:43%"></div>
+                    <div style="height:65%"></div>
+                    <div style="height:78%"></div>
+                    <div style="height:92%"></div>
+                    <div style="height:100%"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- =========================================
+     FARMER DASHBOARD
+========================================= -->
+
+<section id="farmerDashboard" class="dashboard-page">
+
+    <!-- SIDEBAR -->
+
+    <aside class="dashboard-sidebar">
+
+        <button
+    class="sidebar-toggle"
+    onclick="toggleFarmerSidebar()"
+    aria-label="Toggle sidebar"
+    type="button"
+>
+    ☰
+</button>
+
+        <div class="dashboard-brand">
+
+            <div class="dashboard-logo">
+                🌾
+            </div>
+
+            <span>KisanDirect</span>
+
+        </div>
+
+
+        <div class="dashboard-user">
+
+            <div class="dashboard-avatar">
+                FK
+            </div>
+
+            <div>
+
+                <strong id="dashboardUserName">
+                    Farmer
+                </strong>
+
+                <small data-i18n="farmerAccount">
+                    Farmer Account
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR MENU -->
+
+        <nav class="dashboard-menu">
+
+    <button
+        class="dashboard-menu-item active"
+        onclick="showFarmerSection('dashboard', this)">
+
+        <span>🏠</span>
+        <span data-i18n="dashboard">Dashboard</span>
+
+    </button>
+
+
+    <button
+        class="dashboard-menu-item"
+        onclick="showFarmerSection('produce', this)">
+
+        <span>🌾</span>
+        <span data-i18n="myProduce">My Produce</span>
+
+
+    </button>
+
+
+    <button
+        class="dashboard-menu-item"
+        onclick="showFarmerSection('orders', this)">
+
+        <span>📦</span>
+        <span data-i18n="orders">Orders</span>
+
+
+        <span class="menu-count"
+        id="farmerOrdersCount">
+        0
+            
+        </span>
+
+    </button>
+
+
+    <button
+        class="dashboard-menu-item"
+        onclick="showFarmerAIPage()">
+
+        <span>🤖</span>
+        <span data-i18n="aiInsights">AI Insights</span>
+
+    </button>
+
+
+    <button
+        class="dashboard-menu-item"
+        onclick="showFarmerSection('logistics', this)">
+
+        <span>🚚</span>
+        <span data-i18n="logistics">Logistics</span>
+
+    </button>
+
+
+    <button
+        class="dashboard-menu-item"
+        onclick="showFarmerSection('earnings', this)">
+
+        <span>💰</span>
+        <span data-i18n="earnings">Earnings</span>
+
+    </button>
+
+</nav>
+
+        <!-- BOTTOM MENU -->
+
+        <div class="dashboard-bottom">
+
+            <button class="dashboard-menu-item">
+
+                <span>⚙️</span>
+                <span data-i18n="settings">Settings</span>
+
+
+            </button>
+
+
+            <button
+                class="dashboard-menu-item logout-dashboard"
+                onclick="logoutUser()">
+
+                <span>↪</span>
+                <span data-i18n="logout">Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- DASHBOARD CONTENT -->
+
+<div class="dashboard-content"
+    id ="farmerDashboardContent">
+
+
+
+        <!-- TOP BAR -->
+
+        <div class="dashboard-topbar">
+
+            <div>
+
+                <span class="dashboard-label" data-i18n="farmerPortal">
+                    FARMER PORTAL
+                </span>
+
+                <h1>
+                    <span data-i18n="goodMorning">Good morning,</span>
+                    <span id="dashboardGreetingName">
+                        Farmer
+                    </span> 👋
+                </h1>
+
+                <p data-i18n="farmerTodayMessage">
+                    Here's what's happening with
+                    your farm today.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-actions">
+
+                <button
+                    class="notification-btn">
+
+                    🔔
+
+                    <span></span>
+
+                </button>
+
+
+                <div class="dashboard-date">
+
+                    📅
+
+                    <span>
+                        29 August 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATS -->
+
+        <div class="dashboard-stats">
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon green">
+                        💰
+                    </div>
+
+                    <span class="stat-growth">
+                        ↑ 14.8%
+                    </span>
+
+                </div>
+
+                <small data-i18n="totalSales">
+                    Total Sales
+                </small>
+
+                <strong>
+                    ₹48,620
+                </strong>
+
+                <p data-i18n="comparedLastMonth">
+                    Compared to last month
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon blue">
+                        📦
+                    </div>
+
+                    <span class="stat-growth">
+                        ↑ 8.2%
+                    </span>
+
+                </div>
+
+                <small data-i18n="activeOrders">
+                    Active Orders
+                </small>
+
+                <strong>
+                    12
+                </strong>
+
+                <p data-i18n="readyForDispatch">
+                    4 ready for dispatch
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon orange">
+                        🌾
+                    </div>
+
+                    <span class="stat-growth">
+                        6 listings
+                    </span>
+
+                </div>
+
+                <small data-i18n="produceListed">
+                    Produce Listed
+                </small>
+
+                <strong>
+                    2.4 T
+                </strong>
+
+                <p data-i18n="availableForBuyers">
+                    Available for buyers
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon purple">
+                        📈
+                    </div>
+
+                    <span class="stat-growth">
+                        ↑ 8.2%
+                    </span>
+
+                </div>
+
+                <small data-i18n="avgPrice">
+                    Avg. Price
+                </small>
+
+                <strong>
+                    ₹31.40
+                </strong>
+
+                <p data-i18n="betterThanMandi">
+                    Better than mandi
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAIN GRID -->
+
+        <div class="dashboard-main-grid">
+
+
+            <!-- AI CARD -->
+
+            <div class="dashboard-panel ai-dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label" data-i18n="aiMarketIntelligence">
+                            AI MARKET INTELLIGENCE
+                        </span>
+
+                        <h2 data-i18n="demandForecast">
+                            Demand Forecast
+                        </h2>
+
+                    </div>
+
+                    <span class="ai-live" data-i18n="liveDemo">
+                        ● LIVE DEMO
+                    </span>
+
+                </div>
+
+
+                <div class="ai-dashboard-content">
+
+                    <div>
+
+                        <span class="forecast-small" data-i18n="expectedDemandGrowth">
+                            Expected demand growth
+                        </span>
+
+                        <strong class="forecast-big">
+                            +18.4%
+                        </strong>
+
+                        <span class="forecast-high" data-i18n="highDemand">
+                            HIGH DEMAND ↑
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-chart">
+
+                        <div style="height:35%"></div>
+                        <div style="height:44%"></div>
+                        <div style="height:42%"></div>
+                        <div style="height:58%"></div>
+                        <div style="height:67%"></div>
+                        <div style="height:82%"></div>
+                        <div style="height:96%"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ai-recommendation">
+
+                    💡
+
+                    <div>
+
+                        <strong data-i18n="aiRecommendation">
+                            AI Recommendation
+                        </strong>
+
+                        <p data-i18n="tomatoRecommendation">
+                            Tomato demand may increase
+                            over the next 14 days.
+                            Consider increasing supply
+                            by 15%.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label" data-i18n="quickActions">
+                            QUICK ACTIONS
+                        </span>
+
+                        <h2 data-i18n="manageFarm">
+                            Manage Farm
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <button
+                        onclick="openAddProduce()">
+
+                        <span>➕</span>
+
+                        <div>
+
+                            <strong data-i18n="listProduce">
+                                List Produce
+                            </strong>
+
+                            <small data-i18n="sellYourCrops">
+                                Sell your crops
+                            </small>
+
+                        </div>
+
+                    </button>
+
+
+                    <button>
+
+                        <span>📦</span>
+
+                        <div>
+
+                            <strong data-i18n="viewOrders">
+                                View Orders
+                            </strong>
+
+                            <small data-i18n="manageOrders">
+                                Manage orders
+                            </small>
+
+                        </div>
+
+                    </button>
+
+
+                    <button>
+
+                        <span>🚚</span>
+
+                        <div>
+
+                            <strong data-i18n="trackDelivery">
+                                Track Delivery
+                            </strong>
+
+                            <small data-i18n="viewShipments">
+                                View shipments
+                            </small>
+
+                        </div>
+
+                    </button>
+
+
+                    <button>
+
+                        <span>🤖</span>
+
+                        <div>
+
+                            <strong data-i18n="aiInsights">
+                                AI Insights
+                            </strong>
+
+                            <small data-i18n="marketPredictions">
+                                Market predictions
+                            </small>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOWER GRID -->
+
+        <div class="dashboard-lower-grid">
+
+
+            <!-- RECENT ORDERS -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label" data-i18n="recentActivity">
+                            RECENT ACTIVITY
+                        </span>
+
+                        <h2 data-i18n="recentOrders">
+                            Recent Orders
+                        </h2>
+
+                    </div>
+
+                    <button class="view-all" data-i18n="viewAll">
+                        View all →
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-order">
+
+                    <div class="order-product">
+                        🌾
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            #KD-1024
+                        </strong>
+
+                        <small>
+                            Premium Rice • 500 kg
+                        </small>
+
+                    </div>
+
+                    <strong>
+                        ₹16,000
+                    </strong>
+
+                    <span class="order-status transit" data-i18n="inTransit">
+                        In Transit
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-order">
+
+                    <div class="order-product">
+                        🍅
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            #KD-1023
+                        </strong>
+
+                        <small>
+                            Fresh Tomato • 300 kg
+                        </small>
+
+                    </div>
+
+                    <strong>
+                        ₹7,200
+                    </strong>
+
+                    <span class="order-status delivered" data-i18n="delivered">
+                        Delivered
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-order">
+
+                    <div class="order-product">
+                        🥔
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            #KD-1022
+                        </strong>
+
+                        <small>
+                            Potato • 600 kg
+                        </small>
+
+                    </div>
+
+                    <strong>
+                        ₹12,600
+                    </strong>
+
+                    <span class="order-status processing" data-i18n="processing">
+                        Processing
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MARKET INSIGHTS -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label" data-i18n="market">
+                            MARKET
+                        </span>
+
+                        <h2 data-i18n="todaysPrices">
+                            Today's Prices
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="market-price">
+
+                    <div class="price-crop">
+                        🌾
+                    </div>
+
+                    <div>
+                        <strong data-i18n="rice">Rice</strong>
+                        <small data-i18n="gradeA">Grade A</small>
+                    </div>
+
+                    <strong>
+                        ₹32/kg
+                    </strong>
+
+                    <span class="price-up">
+                        ↑ 8%
+                    </span>
+
+                </div>
+
+
+                <div class="market-price">
+
+                    <div class="price-crop">
+                        🍅
+                    </div>
+
+                    <div>
+                        <strong data-i18n="tomato">Tomato</strong>
+                        <small data-i18n="fresh">Fresh</small>
+                    </div>
+
+                    <strong>
+                        ₹24/kg
+                    </strong>
+
+                    <span class="price-up">
+                        ↑ 12%
+                    </span>
+
+                </div>
+
+
+                <div class="market-price">
+
+                    <div class="price-crop">
+                        🥔
+                    </div>
+
+                    <div>
+                        <strong data-i18n="potato">Potato</strong>
+                        <small data-i18n="premium">Premium</small>
+                    </div>
+
+                    <strong>
+                        ₹21/kg
+                    </strong>
+
+                    <span class="price-up">
+                        ↑ 5%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================================
+     FARMER ORDERS PAGE
+========================================= -->
+
+<section id="farmerOrdersPage"
+         class="dashboard-subpage"
+         style="display:none;">
+
+    <div class="page-header">
+
+        <div>
+            <span class="section-label" data-i18n="salesManagement">
+                SALES MANAGEMENT
+            </span>
+
+            <h1 data-i18n="ordersReceived">Orders Received 📦</h1>
+
+            <p data-i18n="manageBuyerOrders">
+                View and manage orders placed by buyers.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <span data-i18n="totalOrders">Total Orders</span>
+            <strong id="farmerTotalOrders">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span data-i18n="pending">Pending</span>
+            <strong id="farmerPendingOrders">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span data-i18n="completed">Completed</span>
+            <strong id="farmerCompletedOrders">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span data-i18n="totalSales">Total Sales</span>
+            <strong id="farmerTotalSales">₹0</strong>
+        </div>
+
+    </div>
+
+    <div class="content-card">
+
+        <span class="section-label" data-i18n="recentOrders">
+            RECENT ORDERS
+        </span>
+
+        <h2 data-i18n="buyerOrders">Buyer Orders</h2>
+
+        <div id="farmerOrdersList">
+
+            <div class="empty-state">
+
+                <div style="font-size:40px;">
+                    📦
+                </div>
+
+                <h3 data-i18n="noOrdersYet">No orders yet</h3>
+
+                <p data-i18n="buyerOrdersAppearHere">
+                    Orders placed by buyers will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FARMER AI INSIGHTS PAGE
+===================================== -->
+
+<section
+    id="farmerAIPage"
+    class="dashboard-subpage"
+    style="display:none;"
+>
+
+<div class="ai-page">
+
+    <!-- =========================================
+         AI HEADER
+    ========================================== -->
+
+    <div class="ai-header">
+
+        <div class="ai-header-content">
+
+            <span class="ai-label" data-i18n="artificialIntelligence">
+                ARTIFICIAL INTELLIGENCE
+            </span>
+
+            <h1 data-i18n="aiFarmingIntelligence">
+                AI Farming Intelligence
+                <span class="ai-robot">🤖</span>
+            </h1>
+
+            <p data-i18n="aiDescription">
+                Smart market predictions to help you decide
+                what to grow, when to sell and how much to stock.
+            </p>
+
+        </div>
+
+        <div class="ai-status">
+    <span class="status-dot"></span>
+    <span data-i18n="aiActive">AI ACTIVE</span>
+</div>
+        </div>
+
+    </div>
+
+    <!-- AI CROP ANALYSIS -->
+
+<div class="ai-analysis-bar">
+
+    <div class="analysis-left">
+
+        <div class="analysis-icon">
+            🌱
+        </div>
+
+        <div>
+
+            <span class="analysis-label" data-i18n="analyseYourCrop">
+                ANALYSE YOUR CROP
+            </span>
+
+            <strong data-i18n="selectCropForInsights">
+                Select a crop to view AI insights
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="crop-selector-wrapper">
+
+        <label for="aiCropSelector" data-i18n="crop">
+            Crop
+        </label>
+
+        <select id="aiCropSelector">
+
+            <option value="tomato" data-i18n="tomato">
+                🍅 Tomato
+            </option>
+
+            <option value="potato" data-i18n="potato">
+                🥔 Potato
+            </option>
+
+            <option value="onion" data-i18n="onion">
+                🧅 Onion
+            </option>
+
+            <option value="rice" data-i18n="rice">
+                🌾 Rice
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+
+    <!-- =========================================
+         AI SUMMARY CARDS
+    ========================================== -->
+
+    <div class="ai-summary-grid">
+
+
+        <!-- Demand -->
+
+        <div class="ai-summary-card">
+
+            <div class="ai-card-icon">
+                📈
+            </div>
+
+            <div>
+
+                <span data-i18n="expectedDemand">
+                    Expected Demand
+                </span>
+
+                <strong id="aiDemandValue">
+                    +18.4%
+                </strong>
+
+                <small data-i18n="next14Days">
+                    Next 14 days
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- Price -->
+
+        <div class="ai-summary-card">
+
+            <div class="ai-card-icon">
+                💰
+            </div>
+
+            <div>
+
+                <span data-i18n="priceTrend">
+                    Price Trend
+                </span>
+
+                <strong id="aiPriceTrend" data-i18n="rising">
+                    ↗ Rising
+                </strong>
+
+                <small data-i18n="highConfidence">
+                    High confidence
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- Opportunity -->
+
+        <div class="ai-summary-card">
+
+            <div class="ai-card-icon best-opportunity-icon">
+                🍅
+            </div>
+
+            <div>
+
+                <span data-i18n="bestOpportunity">
+                    Best Opportunity
+                </span>
+
+                <strong id="aiBestCrop" data-i18n="tomato">
+                    Tomato
+                </strong>
+
+                <small data-i18n="highDemandCrop">
+                    High demand crop
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- Supply -->
+
+        <div class="ai-summary-card">
+
+            <div class="ai-card-icon">
+                📦
+            </div>
+
+            <div>
+
+                <span data-i18n="recommendSupply">
+                    Recommended Supply
+                </span>
+
+                <strong id="aiSupplyValue">
+                    +15%
+                </strong>
+
+                <small data-i18n="suggestedIncrease">
+                    Suggested increase
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         MARKET INTELLIGENCE
+    ========================================== -->
+
+    <div class="ai-section-title">
+
+        <span data-i18n="aiMarketIntelligenceTitle">
+            AI MARKET INTELLIGENCE
+        </span>
+
+        <h2 data-i18n="demandForecastTitle">
+            Demand Forecast
+            <span>📊</span>
+        </h2>
+
+        <p data-i18n="aiPredictionDescription">
+            AI prediction based on simulated historical
+            market trends, buyer activity and seasonal patterns.
+        </p>
+
+    </div>
+
+
+    <!-- =========================================
+         FORECAST CARD
+    ========================================== -->
+
+    <div class="ai-forecast-card">
+
+
+        <!-- Forecast information -->
+
+        <div class="forecast-info">
+
+            <span class="forecast-label" data-i18n="expectedDemandGrowth">
+                EXPECTED DEMAND GROWTH
+            </span>
+
+            <h2 id="forecastDemand">
+                +18.4%
+            </h2>
+
+            <div class="high-demand" data-i18n="highDemand">
+                🔥 HIGH DEMAND
+            </div>
+
+
+            <div class="forecast-details">
+
+                <div>
+
+                    <span data-i18n="forecastPeriod">
+                        Forecast Period
+                    </span>
+
+                    <strong data-i18n="days14">
+                        14 Days
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span data-i18n="confidence">
+                        Confidence
+                    </span>
+
+                    <strong id="forecastConfidence">
+                        87%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Forecast chart -->
+
+        <div class="forecast-chart">
+
+            <div class="chart-bars">
+
+                <span style="height:35%"></span>
+                <span style="height:45%"></span>
+                <span style="height:52%"></span>
+                <span style="height:62%"></span>
+                <span style="height:70%"></span>
+                <span style="height:82%"></span>
+                <span style="height:95%"></span>
+
+            </div>
+
+
+            <div class="chart-labels">
+
+                <span data-i18n="now">
+                    Now
+                </span>
+
+                <span data-i18n="days7">
+                    7 Days
+                </span>
+
+                <span data-i18n="days14">
+                    14 Days
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         QUICK INSIGHT
+    ========================================== -->
+
+    <div class="ai-quick-insight">
+
+        <div class="quick-insight-icon">
+            ✨
+        </div>
+
+        <div>
+
+            <span data-i18n="aiQuickInsight">
+                AI QUICK INSIGHT
+            </span>
+
+            <strong id="tomatoDemandInsight">
+                Tomato demand is expected to rise over
+                the next 14 days.
+            </strong>
+
+            <p data-i18n="considerIncreasingSupply">
+                Consider increasing supply while monitoring
+                market prices.
+            </p>
+
+        </div>
+
+        <div class="insight-confidence">
+
+            <span data-i18n="confidence">
+                Confidence
+            </span>
+
+            <strong>
+                87%
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         AI CONFIDENCE
+    ========================================== -->
+
+    <div class="confidence-card">
+
+        <div class="confidence-heading">
+
+            <span data-i18n="aiConfidence">
+                AI CONFIDENCE
+            </span>
+
+            <h3 data-i18n="predictionConfidence">
+                Prediction confidence
+            </h3>
+
+        </div>
+
+        <div class="confidence-value">
+            87%
+        </div>
+
+        <div class="confidence-bar">
+
+            <div style="width:87%;"></div>
+
+        </div>
+
+        <p data-i18n="basedOnMarketData">
+            Based on simulated historical market trends,
+            buyer activity and seasonal demand patterns.
+        </p>
+
+    </div>
+
+
+    <!-- =========================================
+         RECOMMENDATIONS
+    ========================================== -->
+
+    <div class="ai-section-title recommendation-heading">
+
+        <span data-i18n="aiRecommendations">
+            AI RECOMMENDATIONS
+        </span>
+
+        <h2 data-i18n="whatShouldYouDo">
+            What should you do? 💡
+        </h2>
+
+        <p data-i18n="actionableSuggestions">
+            Actionable suggestions generated from current
+            market conditions.
+        </p>
+
+    </div>
+
+
+    <div class="recommendation-grid">
+
+
+        <!-- Recommendation 1 -->
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-top">
+
+                <div class="recommendation-icon">
+                    🍅
+                </div>
+
+                <span class="priority high" data-i18n="high">
+                    HIGH
+                </span>
+
+            </div>
+
+            <h3 data-i18n="increaseTomatoSupply">
+                Increase Tomato Supply
+            </h3>
+
+            <p data-i18n="tomatoDemandIncrease">
+                Tomato demand is predicted to increase
+                over the next 14 days.
+            </p>
+
+            <div class="recommendation-footer">
+
+                <span data-i18n="recommended">
+                    Recommended
+                </span>
+
+                <strong>
+                    +15%
+                </strong>
+
+            </div>
+
+            <button
+                class="ai-action-button"
+                onclick="showAIAction('supply')"
+                data-i18n="viewSupplyPlan"
+            >
+                View Supply Plan →
+            </button>
+
+        </div>
+
+
+        <!-- Recommendation 2 -->
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-top">
+
+                <div class="recommendation-icon">
+                    💰
+                </div>
+
+                <span class="priority high" data-i18n="high">
+                    HIGH
+                </span>
+
+            </div>
+
+            <h3 data-i18n="monitorPrices">
+                Monitor Prices
+            </h3>
+
+            <p data-i18n="marketPricesUpward">
+                Market prices are showing an upward trend
+                for high-demand crops.
+            </p>
+
+            <div class="recommendation-footer">
+
+                <span data-i18n="opportunity">
+                    Opportunity
+                </span>
+
+                <strong data-i18n="high">
+                    High
+                </strong>
+
+            </div>
+
+            <button
+                class="ai-action-button"
+                onclick="showAIAction('price')"
+                data-i18n="trackMarketPrices"
+            >
+                Track Market Prices →
+            </button>
+
+        </div>
+
+
+        <!-- Recommendation 3 -->
+
+        <div class="recommendation-card">
+
+            <div class="recommendation-top">
+
+                <div class="recommendation-icon">
+                    📦
+                </div>
+
+                <span class="priority medium" data-i18n="medium">
+                    MEDIUM
+                </span>
+
+            </div>
+
+            <h3 data-i18n="planInventory">
+                Plan Inventory
+            </h3>
+
+            <p data-i18n="maintainSufficientStock">
+                Maintain sufficient stock to handle
+                upcoming buyer demand.
+            </p>
+
+            <div class="recommendation-footer">
+
+                <span data-i18n="priority">
+                    Priority
+                </span>
+
+                <strong data-i18n="medium">
+                    Medium
+                </strong>
+
+            </div>
+
+            <button
+                class="ai-action-button"
+                onclick="showAIAction('inventory')"
+                data-i18n="planInventoryButton"
+            >
+                Plan Inventory →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         ASK KISAN AI
+    ========================================== -->
+
+    <div class="ask-ai-card">
+
+        <div class="ask-ai-icon">
+            🤖
+        </div>
+
+        <div class="ask-ai-content">
+
+            <span data-i18n="kisanAiAssistant">
+                KISAN AI ASSISTANT
+            </span>
+
+            <h3 data-i18n="needHelpDeciding">
+                Need help deciding what to do?
+            </h3>
+
+            <p data-i18n="askKisanAiDescription">
+                Ask KisanAI about crops, prices,
+                demand or your next farming decision.
+            </p>
+
+        </div>
+
+        <button
+            class="ask-ai-button"
+            onclick="askKisanAI()"
+        >
+           <span data-i18n="askKisanAI">Ask KisanAI</span>
+            <span>→</span>
+        </button>
+
+    </div>
+
+
+    <!-- =========================================
+         EXPLAINABLE AI
+    ========================================== -->
+
+    <div class="explainable-ai">
+
+        <div class="explain-header">
+
+            <div>
+
+                <span data-i18n="explainableAi">
+                    EXPLAINABLE AI
+                </span>
+
+                <h2 data-i18n="whyThisPrediction">
+                    Why this prediction? 🧠
+                </h2>
+
+                <p data-i18n="undersatndSignals">
+                    Understand the signals behind the AI recommendation.
+                </p>
+
+            </div>
+
+
+            <button
+                class="explain-button"
+                onclick="toggleAIExplanation()"
+                type="button"
+                data-i18n="viewReasoning"
+            >
+                View Reasoning
+            </button>
+
+        </div>
+
+
+        <div
+            id="aiExplanation"
+            class="ai-explanation-content"
+            style="display:none;"
+        >
+
+
+            <div class="reason-item">
+
+                <span>
+                    01
+                </span>
+
+                <div>
+
+                    <strong data-i18n="buyerActivityIncreased">
+                        Buyer activity increased
+                    </strong>
+
+                    <p data-i18n="buyerActivityDescription">
+                        Simulated buyer activity shows
+                        a positive demand pattern.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="reason-item">
+
+                <span>
+                    02
+                </span>
+
+                <div>
+
+                    <strong data-i18n="historicalDemandRising">
+                        Historical demand is rising
+                    </strong>
+
+                    <p data-i18n="historicalDemandDescription"> 
+                        Previous market patterns indicate
+                        increasing demand for tomatoes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="reason-item">
+
+                <span>
+                    03
+                </span>
+
+                <div>
+
+                    <strong data-i18n="marketPricesFavourable">
+                        Market prices are favorable
+                    </strong>
+
+                    <p data-i18n="marketPricesDescription">
+                        Current simulated prices indicate
+                        a positive selling opportunity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="reason-item">
+
+                <span>
+                    04
+                </span>
+
+                <div>
+
+                    <strong data-i18n="seasonalPatternDetected">
+                        Seasonal pattern detected
+                    </strong>
+
+                    <p data-i18n="seasonalPatternDescription">
+                        Similar seasonal demand patterns
+                        were observed in historical data.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         PROTOTYPE NOTICE
+    ========================================== -->
+
+    <div class="ai-prototype-notice">
+
+        <span class="prototype-icon">
+            🤖
+        </span>
+
+        <div>
+
+            <strong data-i18n="aiPrototypeMode">
+                AI Prototype Mode
+            </strong>
+
+            <p data-i18n="simulatedDataNotice">
+                These predictions currently use simulated
+                data for the KisanDirect SIH prototype.
+            </p>
+
+        </div>
+
+        <span class="analysis-time"
+        data-i18n="analysisReady">
+            ● Analysis Ready
+        </span>
+
+    </div>
+
+
+</div>
+
+</section>
+
+<!-- =====================================
+     MY PRODUCE PAGE
+===================================== -->
+
+<div
+    id="farmerProducePage"
+    class="dashboard-subpage">
+
+    <div class="dashboard-topbar">
+
+        <div>
+
+            <span class="dashboard-label" data-i18n="farmManagement">
+                FARM MANAGEMENT
+            </span>
+
+            <h1 data-i18n="myProduce">
+                My Produce 🌾
+            </h1>
+
+            <p data-i18n="manageCrops">
+                Manage your crops, prices and
+                available inventory.
+            </p>
+
+        </div>
+
+        <button
+            class="primary-dashboard-btn"
+            onclick="openAddProduce()"
+            data-i18n="addProduce">
+
+            + Add Produce
+
+        </button>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <div class="dashboard-stats">
+
+        <div class="dashboard-stat-card">
+
+            <small data-i18n="totalListings">
+                Total Listings
+            </small>
+
+            <strong id="totalListings">
+                0
+            </strong>
+
+            <p data-i18n="actveProduceListings">
+                Active produce listings
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <small data-i18n="totalStock">
+                Total Stock
+            </small>
+
+            <strong id="totalStock">
+                0 kg
+            </strong>
+
+            <p data-i18n="availableForBuyers">
+                Available for buyers
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <small data-i18n="todaysSales">
+                Today's Sales
+            </small>
+
+            <strong id="totalSales">
+                ₹0
+            </strong>
+
+            <p data-i18n="fromDirectBuyers">
+                From direct buyers
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-stat-card">
+
+            <small data-i18n="averagePrice">
+                Avg. Price
+            </small>
+
+            <strong id="averagePrice">
+                ₹0.00
+            </strong>
+
+            <p data-i18n="perKilogram">
+                Per kilogram
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCE LIST -->
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <span class="panel-label" data-i18n="inventory">
+                    INVENTORY
+                </span>
+
+                <h2 data-i18n="yourProduce">
+                    Your Produce
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="produce-table">
+
+            <div class="produce-row produce-header">
+
+                <span data-i18n="produce">Produce</span>
+                <span data-i18n="quantity">Quantity</span>
+                <span data-i18n="price">Price</span>
+                <span data-i18n="status">Status</span>
+                <span data-i18n="action">Action</span>
+
+            </div>
+
+
+            <div class="produce-row">
+
+                <div class="produce-name">
+
+                    <span class="produce-icon">
+                        🍅
+                    </span>
+
+                    <div>
+
+                        <strong data-i18n="freshTomato">
+                            Fresh Tomato
+                        </strong>
+
+                        <small data-i18n="gradeARanchi">
+                            Grade A • Ranchi
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    800 kg
+                </span>
+
+                <strong>
+                    ₹24/kg
+                </strong>
+
+                <span class="produce-status active" data-i18n="active">
+                    Active
+                </span>
+
+                <button class="produce-action" data-i18n="edit">
+                    Edit
+                </button>
+
+            </div>
+
+
+            <div class="produce-row">
+
+                <div class="produce-name">
+
+                    <span class="produce-icon">
+                        🌾
+                    </span>
+
+                    <div>
+
+                        <strong data-i18n="premiumRice">
+                            Premium Rice
+                        </strong>
+
+                        <small data-i18n="gradeARanchi">
+                            Grade A • Ranchi
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    1,200 kg
+                </span>
+
+                <strong>
+                    ₹32/kg
+                </strong>
+
+                <span class="produce-status active" data-i18n="active">
+                    Active
+                </span>
+
+                <button class="produce-action" data-i18n="edit">
+                    Edit
+                </button>
+
+            </div>
+
+
+            <div class="produce-row">
+
+                <div class="produce-name">
+
+                    <span class="produce-icon">
+                        🥔
+                    </span>
+
+                    <div>
+
+                        <strong data-i18n="premiumPotato">
+                            Premium Potato
+                        </strong>
+
+                        <small data-i18n="gradeARanchi">
+                            Grade A • Ranchi
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <span>
+                    650 kg
+                </span>
+
+                <strong>
+                    ₹21/kg
+                </strong>
+
+                <span class="produce-status active" data-i18n="active">
+                    Active
+                </span>
+
+                <button class="produce-action" data-i18n="edit">
+                    Edit
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<section id="farmerEarningsPage" class="dashboard-subpage"
+style="display: none;"
+>
+
+<!-- =========================================
+     EARNINGS HEADER
+========================================= -->
+
+<div class="dashboard-topbar">
+
+    <div>
+
+        <span class="dashboard-label" data-i18n="financialManagement">
+            FINANCIAL MANAGEMENT
+        </span>
+
+        <h1 data-i18n="earningsPayments">
+            Earnings & Payments 💰
+        </h1>
+
+        <p data-i18n="trackFarmerIncome">
+            Track your farm income, payments and
+            financial performance.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     EARNINGS SUMMARY
+========================================= -->
+
+<div class="dashboard-stats">
+
+    <!-- TOTAL EARNINGS -->
+
+    <div class="dashboard-stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-card-icon green">
+                💰
+            </div>
+
+            <span class="stat-growth">
+                ↑ 14.8%
+            </span>
+
+        </div>
+
+        <small data-i18n="totalEarnings">
+            Total Earnings
+        </small>
+
+        <strong>
+            ₹48,620
+        </strong>
+
+        <p data-i18n="lifetimeFarmerEarnings">
+            Lifetime farm earnings
+        </p>
+
+    </div>
+
+
+    <!-- THIS MONTH -->
+
+    <div class="dashboard-stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-card-icon blue">
+                📈
+            </div>
+
+            <span class="stat-growth">
+                ↑ 8.2%
+            </span>
+
+        </div>
+
+        <small data-i18n="thisMonth">
+            This Month
+        </small>
+
+        <strong>
+            ₹18,450
+        </strong>
+
+        <p data-i18n="earningsInAugust">
+            Earnings in August
+        </p>
+
+    </div>
+
+
+    <!-- PENDING -->
+
+    <div class="dashboard-stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-card-icon orange">
+                ⏳
+            </div>
+
+            <span class="stat-growth" data-i18n="twoPayments">
+                2 payments
+            </span>
+
+        </div>
+
+        <small data-i18n="pendingPayments">
+            Pending Payments
+        </small>
+
+        <strong>
+            ₹6,200
+        </strong>
+
+        <p data-i18n="awaitingBuyerPayment">
+            Awaiting buyer payment
+        </p>
+
+    </div>
+
+
+    <!-- AVAILABLE BALANCE -->
+
+    <div class="dashboard-stat-card">
+
+        <div class="stat-card-top">
+
+            <div class="stat-card-icon purple">
+                🏦
+            </div>
+
+            <span class="stat-growth" data-i18n="available">
+                Available
+            </span>
+
+        </div>
+
+        <small data-i18n="availableBalance">
+            Available Balance
+        </small>
+
+        <strong>
+            ₹42,320
+        </strong>
+
+        <p data-i18n="readyForWithdrawal">
+            Ready for withdrawal
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     EARNINGS MAIN GRID
+========================================= -->
+
+<div class="dashboard-main-grid">
+
+
+    <!-- =====================================
+         EARNINGS OVERVIEW
+    ====================================== -->
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <span class="panel-label" data-i18n="earningsOverview">
+                    EARNINGS OVERVIEW
+                </span>
+
+                <h2 data-i18n="monthlyEarnings">
+                    Monthly Earnings
+                </h2>
+
+            </div>
+
+            <span class="ai-live" data-i18n="liveDemo">
+                ● LIVE DEMO
+            </span>
+
+        </div>
+
+
+        <div style="
+            display:flex;
+            align-items:flex-end;
+            justify-content:space-between;
+            height:220px;
+            padding:25px 10px 10px;
+            gap:15px;
+        ">
+
+            <div style="height:35%; flex:1; background:#0f766e; border-radius:8px 8px 2px 2px;"></div>
+
+            <div style="height:48%; flex:1; background:#0f766e; border-radius:8px 8px 2px 2px;"></div>
+
+            <div style="height:42%; flex:1; background:#0f766e; border-radius:8px 8px 2px 2px;"></div>
+
+            <div style="height:58%; flex:1; background:#0f766e; border-radius:8px 8px 2px 2px;"></div>
+
+            <div style="height:70%; flex:1; background:#0f766e; border-radius:8px 8px 2px 2px;"></div>
+
+            <div style="height:82%; flex:1; background:#0f766e; border-radius:8px 8px 2px 2px;"></div>
+
+            <div style="height:95%; flex:1; background:#0f766e; border-radius:8px 8px 2px 2px;"></div>
+
+        </div>
+
+
+        <div style="
+            display:flex;
+            justify-content:space-between;
+            padding:0 10px;
+            color:#777;
+            font-size:12px;
+        ">
+
+            <span>Feb</span>
+            <span>Mar</span>
+            <span>Apr</span>
+            <span>May</span>
+            <span>Jun</span>
+            <span>Jul</span>
+            <span>Aug</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         EARNINGS BY CROP
+    ====================================== -->
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <span class="panel-label" data-i18n="cropPerformance">
+                    CROP PERFORMANCE
+                </span>
+
+                <h2 data-i18n="earningsByCrop">
+                    Earnings by Crop
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="market-price">
+
+            <div class="price-crop">
+                🍅
+            </div>
+
+            <div>
+
+                <strong data-i18n="tomato">
+                    Tomato
+                </strong>
+
+                <small data-i18n="tomatoEarningsPercent">
+                    38% of earnings
+                </small>
+
+            </div>
+
+            <strong>
+                ₹18,450
+            </strong>
+
+        </div>
+
+
+        <div class="market-price">
+
+            <div class="price-crop">
+                🌾
+            </div>
+
+            <div>
+
+                <strong data-i18n="rice">
+                    Rice
+                </strong>
+
+                <small data-i18n="riceEarningsPercent">
+                    34% of earnings
+                </small>
+
+            </div>
+
+            <strong>
+                ₹16,520
+            </strong>
+
+        </div>
+
+
+        <div class="market-price">
+
+            <div class="price-crop">
+                🥔
+            </div>
+
+            <div>
+
+                <strong data-i18n="potato">
+                    Potato
+                </strong>
+
+                <small data-i18n="potatoEarningsPercent">
+                    28% of earnings
+                </small>
+
+            </div>
+
+            <strong>
+                ₹13,650
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     RECENT TRANSACTIONS
+========================================= -->
+
+<div class="dashboard-panel">
+
+    <div class="panel-header">
+
+        <div>
+
+            <span class="panel-label" data-i18n="paymentActivity" >
+                PAYMENT ACTIVITY
+            </span>
+
+            <h2 data-i18n="recentTransactions">
+                Recent Transactions
+            </h2>
+
+        </div>
+
+        <button
+            class="view-all"
+            onclick="showFarmerEarningsMessage()"
+            data-i18n="viewAll">
+
+            View all →
+
+        </button>
+
+    </div>
+
+
+    <!-- TRANSACTION 1 -->
+
+    <div class="dashboard-order">
+
+        <div class="order-product">
+            🍅
+        </div>
+
+        <div>
+
+            <strong >
+                Tomato Order #KD-1024
+            </strong>
+
+            <small>
+                Ratu Fresh Mart • 200 kg
+            </small>
+
+        </div>
+
+        <strong>
+            ₹4,800
+        </strong>
+
+        <span class="order-status delivered" data-i18n="paid">
+            Paid
+        </span>
+
+    </div>
+
+
+    <!-- TRANSACTION 2 -->
+
+    <div class="dashboard-order">
+
+        <div class="order-product">
+            🌾
+        </div>
+
+        <div>
+
+            <strong>
+                Rice Order #KD-1023
+            </strong>
+
+            <small>
+                Green Valley FPO • 100 kg
+            </small>
+
+        </div>
+
+        <strong>
+            ₹3,200
+        </strong>
+
+        <span class="order-status delivered"  data-i18n="paid" >
+            Paid
+        </span>
+
+    </div>
+
+
+    <!-- TRANSACTION 3 -->
+
+    <div class="dashboard-order">
+
+        <div class="order-product">
+            🥔
+        </div>
+
+        <div>
+
+            <strong>
+                Potato Order #KD-1022
+            </strong>
+
+            <small>
+                Ranchi Wholesale • 250 kg
+            </small>
+
+        </div>
+
+        <strong>
+            ₹5,250
+        </strong>
+
+        <span class="order-status processing" data-i18n="pending">
+            Pending
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     PAYMENT INFORMATION
+========================================= -->
+
+<div class="dashboard-panel">
+
+    <div class="panel-header">
+
+        <div>
+
+            <span class="panel-label" data-i18n="paymentAccount">
+                PAYMENT ACCOUNT
+            </span>
+
+            <h2 data-i18n="settlementInformation">
+                Settlement Information
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="delivery-info">
+
+        <div>
+
+            <small data-i18n="nextSettlement">
+                Next Settlement
+            </small>
+
+            <strong>
+                02 Sep 2026
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <small data-i18n="pendingAmount">
+                Pending Amount
+            </small>
+
+            <strong>
+                ₹6,200
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <small data-i18n="paymentMethod">
+                Payment Method
+            </small>
+
+            <strong data-i18n="bankTransfer">
+                Bank Transfer
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="track-btn"
+        onclick="showFarmerEarningsMessage()"
+        data-i18n="viewPaymentDetails">
+
+        💰 View Payment Details
+
+    </button>
+
+</div>
+
+</section>
+
+</section>
+
+
+
+
+<!-- =========================================
+     BUYER DASHBOARD
+========================================= -->
+
+<section id="buyerDashboard" class="dashboard-page buyer-dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="dashboard-sidebar">
+
+        <div class="dashboard-brand">
+
+            <div class="dashboard-logo">
+                🌾
+            </div>
+
+            <span>KisanDirect</span>
+
+        </div>
+
+
+        <div class="dashboard-user">
+
+            <div class="dashboard-avatar buyer-avatar">
+                BR
+            </div>
+
+            <div>
+
+                <strong id="buyerDashboardName">
+                    Buyer
+                </strong>
+
+                <small data-i18n="buyerAccount">
+                    Buyer Account
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUYER MENU -->
+
+        <nav class="dashboard-menu">
+
+            <button
+                class="dashboard-menu-item active"
+                onclick="buyerDashboard(this)">
+
+                <span>🏠</span>
+                <span data-i18n="dashboard">Dashboard</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-menu-item"
+                onclick="buyerMarketplace(this)">
+
+                <span>🛒</span>
+                <span data-i18n="marketplace">Marketplace</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-menu-item"
+                onclick="buyerOrders(this)">
+
+                <span>📦</span>
+                <span data-i18n="myOrders">My Orders</span>
+
+                <span class="menu-count"
+                id="buyerOrdersCount">
+                0
+                </span>
+
+            </button>
+
+
+            <button
+                class="dashboard-menu-item"
+                onclick="buyerFarmers(this)">
+
+                <span>👨‍🌾</span>
+               <span data-i18n="farmers">Farmers</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-menu-item"
+                onclick="buyerDeliveries(this)">
+
+                <span>🚚</span>
+                <span data-i18n="deliveries">Deliveries</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-menu-item">
+
+                <span>💳</span>
+                <span data-i18n="payments">Payments</span>
+            </button>
+
+        </nav>
+
+
+        <div class="dashboard-bottom">
+
+            <button class="dashboard-menu-item">
+
+                <span>⚙️</span>
+               <span data-i18n="settings">Settings</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-menu-item logout-dashboard"
+                onclick="logoutUser()">
+
+                <span>↪</span>
+                <span data-i18n="logout">Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- BUYER CONTENT -->
+
+    <div class="dashboard-content">
+
+        <!-- TOP BAR -->
+
+        <div class="dashboard-topbar">
+
+            <div>
+
+                <span class="dashboard-label" data-i18n="buyerPortal">
+                    BUYER PORTAL
+                </span>
+
+                <h1>
+                     <span data-i18n="welcomeBack">
+                        Welcome back,
+                    </span>
+                    <span id="buyerGreetingName">
+                        Buyer
+                    </span> 👋
+
+                </h1>
+
+                <p data-i18n="buyerDashboardDescription">
+                    Discover fresh produce directly
+                    from farmers and FPOs.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-actions">
+
+                <button class="notification-btn">
+                    🔔
+                    <span></span>
+                </button>
+
+
+                <div class="dashboard-date">
+                    📅
+                    <span>
+                        29 August 2026
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUYER STATS -->
+
+        <div class="dashboard-stats">
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon green">
+                        💰
+                    </div>
+
+                    <span class="stat-growth">
+                        ↓ 6.4%
+                    </span>
+
+                </div>
+
+                <small data-i18n="totalPurchases">
+                    Total Purchases
+                </small>
+
+                <strong>
+                    ₹82,450
+                </strong>
+
+                <p data-i18n="thisMonth">
+                    This month
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon blue">
+                        📦
+                    </div>
+
+                    <span class="stat-growth" data-i18n="threeActive">
+                        3 active
+                    </span>
+
+                </div>
+
+                <small data-i18n="activeOrders">
+                    Active Orders
+                </small>
+
+                <strong>
+                    7
+                </strong>
+
+                <p data-i18n="ordersInProgress">
+                    Orders in progress
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon orange">
+                        👨‍🌾
+                    </div>
+
+                    <span class="stat-growth" data-i18n="fourNew">
+                        +4 new
+                    </span>
+
+                </div>
+
+                <small data-i18n="savedFarmers">
+                    Saved Farmers
+                </small>
+
+                <strong>
+                    12
+                </strong>
+
+                <p  data-i18n="trustedSuppliers">
+                    Trusted suppliers
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="stat-card-top">
+
+                    <div class="stat-card-icon purple">
+                        🚚
+                    </div>
+
+                    <span class="stat-growth" data-i18n="onTime">
+                        On time
+                    </span>
+
+                </div>
+
+                <small data-i18n="deliveries">
+                    Deliveries
+                </small>
+
+                <strong>
+                    96%
+                </strong>
+
+                <p  data-i18n="deliverySuccessRate">
+                    Delivery success rate
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MARKETPLACE + AI -->
+
+        <div class="dashboard-main-grid">
+
+
+            <!-- RECOMMENDED PRODUCE -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label" data-i18n="marketplace">
+                            MARKETPLACE
+                        </span>
+
+                        <h2 data-i18n="recommendedProduce">
+                            Recommended Produce
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="view-all"
+                        onclick="buyerMarketplace()"
+                         data-i18n="viewMarketplace">
+
+                        View marketplace →
+
+                    </button>
+
+                </div>
+
+
+                <div class="buyer-product">
+
+                    <div class="buyer-product-icon">
+                        🍅
+                    </div>
+
+                    <div class="buyer-product-info">
+
+                        <strong>
+                            Fresh Tomato
+                        </strong>
+
+                        <small>
+                            Maa Agro FPO • Ranchi
+                        </small>
+
+                    </div>
+
+                    <div class="buyer-price">
+
+                        <strong>
+                            ₹24/kg
+                        </strong>
+
+                        <small data-i18n="kgAvailable800">
+                            800 kg available
+                        </small>
+
+                    </div>
+
+                    <button
+                        class="buy-small-btn"
+                        onclick="buyProduct('Fresh Tomato')"
+                         data-i18n="buy">
+
+                        Buy
+
+                    </button>
+
+                </div>
+
+
+                <div class="buyer-product">
+
+                    <div class="buyer-product-icon">
+                        🌾
+                    </div>
+
+                    <div class="buyer-product-info">
+
+                        <strong>
+                            Premium Rice
+                        </strong>
+
+                        <small>
+                            Green Valley FPO • Ranchi
+                        </small>
+
+                    </div>
+
+                    <div class="buyer-price">
+
+                        <strong>
+                            ₹32/kg
+                        </strong>
+
+                        <small data-i18n="kgAvailable1200">
+                            1,200 kg available
+                        </small>
+
+                    </div>
+
+                    <button
+                        class="buy-small-btn"
+                        onclick="buyProduct('Premium Rice')"
+                         data-i18n="buy">
+
+                        Buy
+
+                    </button>
+
+                </div>
+
+
+                <div class="buyer-product">
+
+                    <div class="buyer-product-icon">
+                        🥔
+                    </div>
+
+                    <div class="buyer-product-info">
+
+                        <strong>
+                            Premium Potato
+                        </strong>
+
+                        <small>
+                            Jharkhand Farmers FPO
+                        </small>
+
+                    </div>
+
+                    <div class="buyer-price">
+
+                        <strong>
+                            ₹21/kg
+                        </strong>
+
+                        <small data-i18n="kgAvailable650">
+                            650 kg available
+                        </small>
+
+                    </div>
+
+                    <button
+                        class="buy-small-btn"
+                        onclick="buyProduct('Premium Potato')"
+                         data-i18n="buy">
+
+                        Buy
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI MARKET CARD -->
+
+            <div class="dashboard-panel buyer-ai-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label"
+                        data-i18n="aiMarketIntelligence">
+                            AI MARKET INTELLIGENCE
+                        </span>
+
+                        <h2 data-i18n="smartBuying">
+                            Smart Buying
+                        </h2>
+
+                    </div>
+
+                    <span class="ai-live">
+                        ● AI
+                    </span>
+
+                </div>
+
+
+                <div class="buyer-ai-number">
+                    +18.4%
+                </div>
+
+                <p class="buyer-ai-text"
+                 data-i18n="tomatoDemandExpected">
+                    Tomato demand is expected to
+                    increase over the next 14 days.
+                </p>
+
+
+                <div class="buyer-ai-recommendation">
+
+                    🤖
+
+                    <div>
+
+                        <strong data-i18n="aiRecommendation">
+                            AI Recommendation
+                        </strong>
+
+                        <p data-i18n="purchaseTomatoEarly">
+                            Consider purchasing tomato
+                            inventory early to avoid
+                            potential price increases.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="ai-action-btn"
+                    onclick="showAIMessage()"
+                    data-i18n="viewAIInsights">
+
+                    View AI Insights →
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOWER SECTION -->
+
+        <div class="dashboard-lower-grid">
+
+
+            <!-- ORDERS -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label"
+                        data-i18n="yourActivity">
+                            YOUR ACTIVITY
+                        </span>
+
+                        <h2 data-i18n="recentOrders">
+                            Recent Orders
+                        </h2>
+
+                    </div>
+
+                    <button class="view-all"
+                    data-i18n="viewAll">
+                        View all →
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-order">
+
+                    <div class="order-product">
+                        🍅
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            #KD-B1024
+                        </strong>
+
+                        <small>
+                            Fresh Tomato • 200 kg
+                        </small>
+
+                    </div>
+
+                    <strong>
+                        ₹4,800
+                    </strong>
+
+                    <span class="order-status transit"
+                     data-i18n="inTransit">
+                        In Transit
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-order">
+
+                    <div class="order-product">
+                        🌾
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            #KD-B1023
+                        </strong>
+
+                        <small>
+                            Premium Rice • 100 kg
+                        </small>
+
+                    </div>
+
+                    <strong>
+                        ₹3,200
+                    </strong>
+
+                    <span class="order-status delivered"
+                    data-i18n="delivered">
+                        Delivered
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-order">
+
+                    <div class="order-product">
+                        🥔
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            #KD-B1022
+                        </strong>
+
+                        <small>
+                            Potato • 250 kg
+                        </small>
+
+                    </div>
+
+                    <strong>
+                        ₹5,250
+                    </strong>
+
+                    <span class="order-status processing"
+                     data-i18n="processing">
+                        Processing
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERY -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label" data-i18n="logistics">
+                            LOGISTICS
+                        </span>
+
+                        <h2 data-i18n="activeDelivery">
+                            Active Delivery
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="delivery-box">
+
+                    <div class="delivery-route">
+
+                        <div class="route-point">
+
+                            <span>🌾</span>
+
+                            <div>
+
+                                <strong data-i18n="farmer">
+                                    Farmer
+                                </strong>
+
+                                <small >
+                                    Ranchi
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-line"></div>
+
+
+                        <div class="route-point">
+
+                            <span>📍</span>
+
+                            <div>
+
+                                <strong data-i18n="you">
+                                    You
+                                </strong>
+
+                                <small>
+                                    Ratu, Ranchi
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="delivery-info">
+
+                        <div>
+
+                            <small data-i18n="estimatedArrival">
+                                Estimated arrival
+                            </small>
+
+                            <strong>
+                                1h 25m
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <small data-i18n="distance">
+                                Distance
+                            </small>
+
+                            <strong>
+                                28 km
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="track-btn"
+                        onclick="trackDelivery()"
+                        data-i18n="trackDelivery">
+
+                        🚚 Track Delivery
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- </section> -->
+
+<!-- =========================================
+     BUYER MY ORDERS
+========================================= -->
+<!-- =========================================
+     BUYER FARMERS
+========================================= -->
+
+<section
+    id="buyerFarmersPage"
+    class="dashboard-subpage"
+    style="display:none;">
+
+    <div class="dashboard-topbar">
+        <div>
+            <span class="dashboard-label"
+             data-i18n="farmerNetwork">
+                FARMER NETWORK
+            </span>
+
+            <h1 data-i18n="farmersTitle">
+                Farmers 👨‍🌾
+            </h1>
+
+            <p data-i18n="farmerNetworkDescription">
+                Discover and connect with trusted local farmers.
+            </p>
+        </div>
+    </div>
+
+    <div class="dashboard-stats">
+
+        <div class="dashboard-stat-card">
+            <div class="stat-card-top">
+                <div class="stat-card-icon green">
+                    👨‍🌾
+                </div>
+            </div>
+
+            <small data-i18n="availableFarmers">
+                Available Farmers
+            </small>
+
+            <strong>
+                128
+            </strong>
+
+            <p  data-i18n="verifiedFarmers">
+                Verified farmers
+            </p>
+        </div>
+
+        <div class="dashboard-stat-card">
+            <div class="stat-card-top">
+                <div class="stat-card-icon orange">
+                    ⭐
+                </div>
+            </div>
+
+            <small data-i18n="savedFarmers">
+                Saved Farmers
+            </small>
+
+            <strong>
+                12
+            </strong>
+
+            <p data-i18n="yourTrustedSuppliers">
+                Your trusted suppliers
+            </p>
+        </div>
+
+        <div class="dashboard-stat-card">
+            <div class="stat-card-top">
+                <div class="stat-card-icon blue">
+                    📍
+                </div>
+            </div>
+
+            <small data-i18n="nearbyFarmers">
+                Nearby Farmers
+            </small>
+
+            <strong>
+                24
+            </strong>
+
+            <p data-i18n="withinYourRegion">
+                Within your region
+            </p>
+        </div>
+
+        <div class="dashboard-stat-card">
+            <div class="stat-card-top">
+                <div class="stat-card-icon purple">
+                    🌾
+                </div>
+            </div>
+
+            <small data-i18n="fpos">
+                FPOs
+            </small>
+
+            <strong>
+                18
+            </strong>
+
+            <p data-i18n="farmerOrganizations">
+                Farmer organizations
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-panel">
+
+        <div class="panel-header">
+    <div>
+        <span class="panel-label"  data-i18n="localFarmers">
+            LOCAL FARMERS
+        </span>
+
+        <h2 data-i18n="trustedFarmers">
+            Trusted Farmers 👨‍🌾
+        </h2>
+
+        <p style="
+            margin:6px 0 0;
+            color:#7d9087;
+            font-size:11px;
+        "
+        data-i18n="verifiedFarmersDirectPurchase">
+            Verified farmers available for direct purchase
+        </p>
+    </div>
+
+    <span style="
+        background:#eaf7ef;
+        color:#16794c;
+        padding:7px 12px;
+        border-radius:20px;
+        font-size:10px;
+        font-weight:800;
+    "
+     data-i18n="verifiedNetwork">
+        ✓ Verified Network
+    </span>
+</div>
+
+
+        <div class="buyer-product">
+
+            <div class="buyer-product-icon">
+                👨‍🌾
+            </div>
+
+            <div class="buyer-product-info">
+                <strong>
+                    Ramesh Kumar
+                </strong>
+
+                <small>
+                    Ranchi • Tomato & Vegetables
+                </small>
+            </div>
+
+            <div class="buyer-price">
+                <strong>
+                    ⭐ 4.8
+                </strong>
+
+                <small>
+                    42 orders
+                </small>
+            </div>
+
+            <button
+                class="buy-small-btn"
+                onclick="openFarmerProfile('Ramesh Kumar')"
+                data-i18n="view">
+                View
+            </button>
+
+        </div>
+
+
+        <div class="buyer-product">
+
+            <div class="buyer-product-icon">
+                👨‍🌾
+            </div>
+
+            <div class="buyer-product-info">
+                <strong>
+                    Suresh Mahto
+                </strong>
+
+                <small>
+                    Khunti • Rice & Wheat
+                </small>
+            </div>
+
+            <div class="buyer-price">
+                <strong>
+                    ⭐ 4.7
+                </strong>
+
+                <small>
+                    36 orders
+                </small>
+            </div>
+
+            <button
+                class="buy-small-btn"
+                onclick="openFarmerProfile('Suresh Mahto')"
+                data-i18n="view">
+                View
+            </button>
+
+        </div>
+
+
+        <div class="buyer-product">
+
+            <div class="buyer-product-icon">
+                👨‍🌾
+            </div>
+
+            <div class="buyer-product-info">
+                <strong>
+                    Anita Devi
+                </strong>
+
+                <small>
+                    Ramgarh • Potato & Onion
+                </small>
+            </div>
+
+            <div class="buyer-price">
+                <strong>
+                    ⭐ 4.9
+                </strong>
+
+                <small>
+                    51 orders
+                </small>
+            </div>
+
+            <button
+                class="buy-small-btn"
+                onclick="openFarmerProfile('Anita Devi')"
+                data-i18n="view">
+                View
+            </button>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<section
+    id="buyerOrders"
+    class="dashboard-subpage"
+    style="display:none;">
+
+
+    <div class="buyer-orders-header">
+
+    <div class="buyer-orders-header-content">
+
+        <div class="buyer-purchases-heading">
+
+            <div class="buyer-orders-eyebrow"
+            data-i18n="purchaseManagement">
+                <span class="eyebrow-dot"></span>
+                PURCHASE MANAGEMENT
+            </div>
+
+            <h1>
+                <span data-i18n="myOrders">My Orders</span>
+                <span class="orders-title-icon">📦</span>
+            </h1>
+
+            <p data-i18n="trackManagePurchases">
+                Track and manage every purchase
+                directly from local farmers.
+            </p>
+
+            <div class="orders-header-tags">
+                <span data-i18n="farmerDirect">🌱 Farmer Direct</span>
+                <span data-i18n="secureOrders">🔒 Secure Orders</span>
+                <span data-i18n="trackable">🚚 Trackable</span>
+            </div>
+
+        </div>
+
+        <div class="orders-header-visual">
+
+            <div class="orders-visual-circle">
+                <span class="orders-big-icon">📦</span>
+            </div>
+
+            <div class="orders-floating-card">
+
+                <span class="floating-check">✓</span>
+
+                <div>
+                    <strong data-i18n="orderHub">Order Hub</strong>
+                    <small data-i18n="allPurchasesOnePlace">All purchases in one place</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="content-card">
+
+        <span class="section-label"
+         data-i18n="orderHistory">
+            ORDER HISTORY
+        </span>
+
+        <h2 data-i18n="yourOrders">
+            Your Orders
+        </h2>
+
+        <div id="buyerOrdersList">
+
+            <div class="empty-state">
+
+                <div style="font-size:40px;">
+                    📦
+                </div>
+
+                <h3 data-i18n="noOrdersYet">
+                    No orders yet
+                </h3>
+
+                <p data-i18n="placedOrdersAppearHere">
+                    Your placed orders will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            🌾
+            <span>KisanDirect</span>
+        </div>
+
+        <p data-i18n="footerDescription">
+            Building a smarter and fairer
+            agricultural marketplace.
+        </p>
+
+        <small data-i18n="footerCopyright">
+            © 2026 KisanDirect • SIH Prototype
+        </small>
+
+    </footer>
+
+    <!-- =========================================
+     AUTHENTICATION MODAL
+========================================= -->
+
+<div class="auth-overlay" id="authOverlay">
+
+    <div class="auth-modal">
+
+        <!-- Close button -->
+        <button class="auth-close" onclick="closeAuth()">
+            ×
+        </button>
+
+
+        <!-- ===============================
+             LOGIN
+        ================================ -->
+
+        <div class="auth-screen active" id="loginScreen">
+
+            <div class="auth-logo">
+                🌾
+            </div>
+
+            <h2 data-i18n="welcomeBack">Welcome back</h2>
+
+            <p class="auth-subtitle"
+             data-i18n="loginToContinue">
+                Login to continue to KisanDirect
+            </p>
+
+
+            <div class="role-selector">
+
+                <button
+                    class="role-btn active"
+                    onclick="selectLoginRole('farmer', this)"
+                     data-i18n="farmer">
+
+                    👨‍🌾 Farmer
+
+                </button>
+
+                <button
+                    class="role-btn"
+                    onclick="selectLoginRole('buyer', this)"
+                    data-i18n="buyer">
+
+                    🛒 Buyer
+
+                </button>
+
+            </div>
+
+
+            <form onsubmit="loginUser(event)">
+
+                <div class="form-group">
+
+                    <label>Mobile Number</label>
+
+                    <input
+                        type="tel"
+                        id="loginMobile"
+                        placeholder="Enter mobile number"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-i18n="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter password"
+                        required>
+
+                </div>
+
+
+                <div class="forgot-row">
+
+                    <label class="remember">
+
+                        <input type="checkbox">
+
+                        <span data-i18n="rememberMe">
+                            Remember me
+                        </span>
+
+                    </label>
+
+                    <button
+                        type="button"
+                        class="text-button"
+                        onclick="demoMessage()"
+                        data-i18n="forgotPassword">
+
+                        Forgot password?
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="auth-submit"
+                    type="submit"
+                    data-i18n="loginButton">
+
+                    Login →
+
+                </button>
+
+            </form>
+
+
+            <div class="auth-divider">
+
+                <span data-i18n="newToKisanDirect">New to KisanDirect?</span>
+
+            </div>
+
+
+            <button
+                class="create-account-btn"
+                onclick="showAccountType()"
+                data-i18n="createAccount">
+
+                Create an account
+
+            </button>
+
+
+            <div class="demo-login">
+
+                <strong data-i18n="prototypeDemo">Prototype Demo</strong>
+
+                <span data-i18n="localAccountLogin">
+                    You can create an account and login locally.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===============================
+             ACCOUNT TYPE
+        ================================ -->
+
+        <div class="auth-screen" id="accountTypeScreen">
+
+            <button
+                class="auth-back"
+                onclick="showLogin()"
+                data-i18n="back">
+
+                ← Back
+
+            </button>
+
+
+            <h2 data-i18n="joinKisanDirect">Join KisanDirect</h2>
+
+            <p class="auth-subtitle"
+             data-i18n="howUsePlatform">
+                How would you like to use the platform?
+            </p>
+
+
+            <div class="account-options">
+
+                <button
+                    class="account-card"
+                    onclick="showFarmerRegister()">
+
+                    <div class="account-icon farmer-icon">
+                        👨‍🌾
+                    </div>
+
+
+                        <h3 data-i18n="farmerFpoAccount">I'm a Farmer / FPO</h3>
+
+                        <p data-i18n="farmerAccountDescription">
+                            Sell produce directly, receive orders
+                            and access AI market insights.
+                        </p>
+
+                    
+
+                    <span>→</span>
+
+                </button>
+
+
+                <button
+                    class="account-card"
+                    onclick="showBuyerRegister()">
+
+                    <div class="account-icon buyer-icon">
+                        🛒
+                    </div>
+
+                    <div>
+
+                        <h3 data-i18n="buyerAccountOption">I'm a Buyer</h3>
+
+                        <p data-i18n="buyerAccountDescription">
+                            Purchase fresh produce directly
+                            from verified farmers and FPOs.
+                        </p>
+
+                    </div>
+
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===============================
+             FARMER REGISTRATION
+        ================================ -->
+
+        <div class="auth-screen" id="farmerRegisterScreen">
+
+            <button
+                class="auth-back"
+                onclick="showAccountType()"
+                data-i18n="back">
+
+                ← Back
+
+            </button>
+
+
+            <div class="register-heading">
+
+                <div class="register-icon">
+                    👨‍🌾
+                </div>
+
+                <div>
+
+                    <h2 data-i18n="createFarmerAccount">Create Farmer Account</h2>
+
+                    <p data-i18n="startSellingDirectly">
+                        Start selling directly through KisanDirect
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form onsubmit="registerFarmer(event)">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label data-i18n="fullName">Full Name</label>
+
+                        <input
+                            id="farmerName"
+                            type="text"
+                            placeholder="Enter your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label data-i18n="mobileNumber">Mobile Number</label>
+
+                        <input
+                            id="farmerMobile"
+                            type="tel"
+                            placeholder="10-digit number"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label data-i18n="villageCity">Village / City</label>
+
+                        <input
+                            id="farmerVillage"
+                            type="text"
+                            placeholder="Your village"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label data-i18n="district">District</label>
+
+                        <input
+                            id="farmerDistrict"
+                            type="text"
+                            placeholder="Your district"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label data-i18n="state">State</label>
+
+                        <select id="farmerState">
+
+                            <option>Jharkhand</option>
+                            <option>Bihar</option>
+                            <option>West Bengal</option>
+                            <option>Odisha</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Maharashtra</option>
+                            <option>Punjab</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label data-i18n="primaryCrop">Primary Crop</label>
+
+                        <select id="farmerCrop">
+
+                            <option>Rice</option>
+                            <option>Wheat</option>
+                            <option>Tomato</option>
+                            <option>Potato</option>
+                            <option>Onion</option>
+                            <option>Maize</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-i18n="createPassword">Create Password</label>
+
+                    <input
+                        id="farmerPassword"
+                        type="password"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        required>
+
+                </div>
+
+
+                <button
+                    class="auth-submit"
+                    type="submit"
+                    data-i18n="createFarmerAccountButton">
+
+                    Create Farmer Account →
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ===============================
+             BUYER REGISTRATION
+        ================================ -->
+
+        <div class="auth-screen" id="buyerRegisterScreen">
+
+            <button
+                class="auth-back"
+                onclick="showAccountType()"
+                data-i18n="back">
+
+                ← Back
+
+            </button>
+
+
+            <div class="register-heading">
+
+                <div class="register-icon buyer">
+                    🛒
+                </div>
+
+                <div>
+
+                    <h2 data-i18n="createBuyerAccount">Create Buyer Account</h2>
+
+                    <p data-i18n="sourceDirectlyFromFarmers">
+                        Source produce directly from farmers
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form onsubmit="registerBuyer(event)">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label data-i18n="nameBusinessName">Name / Business Name</label>
+
+                        <input
+                            id="buyerName"
+                            type="text"
+                            placeholder="Enter name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label data-i18n="mobileNumber">Mobile Number</label>
+
+                        <input
+                            id="buyerMobile"
+                            type="tel"
+                            placeholder="10-digit number"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label data-i18n="buyerType">Buyer Type</label>
+
+                        <select id="buyerType">
+
+                            <option>Consumer</option>
+                            <option>Wholesaler</option>
+                            <option>Retailer</option>
+                            <option>Restaurant</option>
+                            <option>Hotel</option>
+                            <option>Food Processor</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label data-i18n="location">Location</label>
+
+                        <input
+                            id="buyerLocation"
+                            type="text"
+                            placeholder="City / District"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-i18n="createPassword">Create Password</label>
+
+                    <input
+                        id="buyerPassword"
+                        type="password"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        required>
+
+                </div>
+
+
+                <button
+                    class="auth-submit"
+                    type="submit"
+                    data-i18n="createBuyerAccountButton">
+
+                    Create Buyer Account →
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ===============================
+             SUCCESS
+        ================================ -->
+
+        <div class="auth-screen success-screen" id="successScreen">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2 data-i18n="accountCreated">Account Created!</h2>
+
+            <p data-i18n="accountCreatedSuccessfully">
+                Your KisanDirect account has been
+                successfully created.
+            </p>
+
+            <button
+                class="auth-submit"
+                onclick="showLogin()"
+                data-i18n="continueToLogin">
+
+                Continue to Login →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Notification -->
+
+<div class="notification" id="notification"></div>
+
+    <script src="app.js"></script>
+
+<!-- =========================================
+     ADD PRODUCE MODAL
+========================================= -->
+
+<div id="addProduceModal" class="produce-modal">
+
+    <div class="produce-modal-overlay"
+         onclick="closeAddProduce()">
+    </div>
+
+
+    <div class="produce-modal-card">
+
+        <!-- HEADER -->
+
+        <div class="produce-modal-header">
+
+            <div>
+
+                <span class="modal-label" data-i18n="farmManagement">
+                    FARM MANAGEMENT
+                </span>
+
+                <h2 data-i18n="addNewProduce">
+                    Add New Produce 🌾
+                </h2>
+
+                <p  data-i18n="listFreshProduce">
+                    List your fresh produce directly
+                    for consumers and bulk buyers.
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                onclick="closeAddProduce()">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form
+            id="addProduceForm"
+            onsubmit="saveProduce(event)">
+
+
+            <!-- PRODUCE NAME -->
+
+            <div class="form-field">
+
+                <label data-i18n="produceName">
+                    Produce Name
+                </label>
+
+                <input
+                    type="text"
+                    id="produceName"
+                    placeholder="e.g. Fresh Tomato"
+                    required>
+
+            </div>
+
+
+            <!-- CATEGORY -->
+
+            <div class="form-row">
+
+                <div class="form-field">
+
+                    <label data-i18n="category">
+                        Category
+                    </label>
+
+                    <select
+                        id="produceCategory"
+                        required>
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="Vegetables">
+                            Vegetables
+                        </option>
+
+                        <option value="Fruits">
+                            Fruits
+                        </option>
+
+                        <option value="Grains">
+                            Grains
+                        </option>
+
+                        <option value="Pulses">
+                            Pulses
+                        </option>
+
+                        <option value="Spices">
+                            Spices
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- GRADE -->
+
+                <div class="form-field">
+
+                    <label data-i18n="qualityGrade">
+                        Quality Grade
+                    </label>
+
+                    <select
+                        id="produceGrade"
+                        required>
+
+                        <option value="Grade A">
+                            Grade A
+                        </option>
+
+                        <option value="Grade B">
+                            Grade B
+                        </option>
+
+                        <option value="Grade C">
+                            Grade C
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTITY + UNIT -->
+
+            <div class="form-row">
+
+                <div class="form-field">
+
+                    <label data-i18n="quantityAvailable">
+                        Quantity Available
+                    </label>
+
+                    <input
+                        type="number"
+                        id="produceQuantity"
+                        placeholder="e.g. 500"
+                        min="1"
+                        required>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label data-i18n="unit">
+                        Unit
+                    </label>
+
+                    <select
+                        id="produceUnit">
+
+                        <option value="kg">
+                            Kilograms (kg)
+                        </option>
+
+                        <option value="quintal">
+                            Quintal
+                        </option>
+
+                        <option value="ton">
+                            Tonnes
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <div class="form-field">
+
+                <label data-i18n="pricePerKg">
+                    Price per kg
+                </label>
+
+                <div class="price-input">
+
+                    <span>₹</span>
+
+                    <input
+                        type="number"
+                        id="producePrice"
+                        placeholder="e.g. 24"
+                        min="1"
+                        step="0.01"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="form-field">
+
+                <label data-i18n="farmPickupLocation">
+                    Farm / Pickup Location
+                </label>
+
+                <input
+                    type="text"
+                    id="produceLocation"
+                    placeholder="e.g. Ranchi, Jharkhand"
+                    required>
+
+            </div>
+
+
+            <!-- AVAILABLE DATE -->
+
+            <div class="form-field">
+
+                <label data-i18n="availableFrom">
+                    Available From
+                </label>
+
+                <input
+                    type="date"
+                    id="produceAvailableDate"
+                    required>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="produce-modal-actions">
+
+                <button
+                    type="button"
+                    class="modal-cancel-btn"
+                    onclick="closeAddProduce()"
+                    data-i18n="cancel">
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="modal-submit-btn"
+                    data-i18n="listProduce">
+
+                    🌾 List Produce
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     KISAN AI MODAL
+========================================= -->
+
+<div id="kisanAIModal" class="kisan-ai-modal">
+
+    <div class="kisan-ai-overlay"
+         onclick="closeKisanAI()">
+    </div>
+
+    <div class="kisan-ai-dialog">
+
+        <button
+            class="kisan-ai-close"
+            onclick="closeKisanAI()">
+            ×
+        </button>
+
+        <div class="kisan-ai-dialog-header">
+
+            <div class="kisan-ai-bot">
+                🤖
+            </div>
+
+            <div>
+                <span data-i18n="kisanDirectAIAssistant">KISANDIRECT AI ASSISTANT</span>
+
+                <h2 data-i18n="kisanAIAnalysis">
+                    KisanAI Analysis
+                </h2>
+
+                <p data-i18n="smartGuidance">
+                    Smart guidance based on current crop insights.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="kisan-ai-crop">
+
+            <span id="kisanAICropEmoji">🌾</span>
+
+            <div>
+                <small data-i18n="selectedCrop">SELECTED CROP</small>
+
+                <strong id="kisanAICropName">
+                    Rice
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="kisan-ai-stats">
+
+            <div>
+                <span data-i18n="demand">📈 Demand</span>
+                <strong id="kisanAIDemand">
+                    +9.8%
+                </strong>
+            </div>
+
+            <div>
+                <span data-i18n="priceTrend">💰 Price Trend</span>
+                <strong id="kisanAIPrice">
+                    → Stable
+                </strong>
+            </div>
+
+            <div>
+                <span data-i18n="supply">📦 Supply</span>
+                <strong id="kisanAISupply">
+                    +7%
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="kisan-ai-advice">
+
+            <div class="advice-icon">
+                💡
+            </div>
+
+            <div>
+
+                <span data-i18n="aiRecommendation">AI RECOMMENDATION</span>
+
+                <p id="kisanAIAdvice"  data-i18n="maintainSupplyMonitorMarket">
+                    Maintain current supply levels and monitor
+                    market conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="kisan-ai-done"
+            onclick="closeKisanAI()"
+            data-i18n="gotIt">
+
+            Got it ✓
+
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
